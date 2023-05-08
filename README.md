@@ -25,4 +25,14 @@ Feito isso crie uma tela com um botão simples que dispara o processamento desta
 
 Utilize os padrões que preferir para as tarefas.
 
+### Terceira Tarefa:
+
+Crie um test unitário que valide o tamanho máximo do campo conteúdo.
+
+Crie um test unitário que valide a seguinte regra:
+
+Se a categoria for "Remessa" o título do registro deve conter a palavra "semestre", caso contrário deve emitir um erro de registro inválido.
+Se a caterogia for "Remessa Parcial", o titulo deve conter o nome de um mês(Janeiro, Fevereiro, etc), caso contrário deve emitir um erro de registro inválido.
+
+
 Boa sorte!
