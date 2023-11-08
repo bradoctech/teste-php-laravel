@@ -36,3 +36,11 @@ Se a caterogia for "Remessa Parcial", o titulo deve conter o nome de um mês(Jan
 
 
 Boa sorte!
+
+
+#### Passos para subir ambiente
+
+1. Criando branch - git checkout -b feature/up_environment
+2. Copiando arquivo env - cp .env.example .env
+3. composer install
+4. php artisan key:generate
