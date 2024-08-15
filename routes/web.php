@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/import', [ImportController::class, 'showImportPage'])->name('import.show');
+Route::post('/import', [ImportController::class, 'importData'])->name('import.data');

@@ -11,17 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Como melhorias, para melhorar a legibilidade do código, foi adicionado o método foreignId() e o método constrained() para simplificar a criação da chave estrangeira e a troca da ordem dos campos de timestamp para o final da tabela
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->bigInteger('category_id');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade'); // foreignId() e constrained() simplificam o código
             $table->string('title', 60);
             $table->text('contents');
-
-            $table->foreign('category_id')
-                ->references('id')
-                ->on('categories')
-                ->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class CategorySeeder extends Seeder
 {
@@ -12,11 +12,10 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('categories')->insert([
-            'name' => 'Remessa Parcial'
-        ]);
-        DB::table('categories')->insert([
-            'name' => 'Remessa'
+        // Como melhoria, foi substituído o método DB::table() pelo método Category::insert() para simplificar a inserção de dados através do modelo Category
+        Category::insert([
+            ['name' => 'Remessa Parcial'],
+            ['name' => 'Remessa'],
         ]);
     }
 }

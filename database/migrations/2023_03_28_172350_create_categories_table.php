@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Como melhoria apenas o aumento do tamanho do campo name de 20 para 100, adição do unique para garantir que não haja duas categorias com o mesmo nome e troca da ordem dos campos de timestamp e name
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 100)->unique();
             $table->timestamps();
-            $table->string('name', 20);
         });
     }
 
