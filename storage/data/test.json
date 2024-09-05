@@ -1,0 +1,15 @@
+{
+    "exercicio": 2023,
+    "documentos": [
+        {
+           "categoria":  "Remessa",
+           "titulo": "Teste semestre sucesso",
+           "conteúdo": "Teste de conteudo para os testes"
+        },
+        {
+           "categoria":  "Remessa Parcial",
+           "titulo": "Teste Janeiro sucesso",
+           "conteúdo": "Teste de conteudo para os testes"
+        }
+    ]
+}
